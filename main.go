@@ -4,6 +4,7 @@ import (
 	"goprismatemp/db"
 
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 )
 
 type PostBodyRequest struct {
@@ -12,6 +13,14 @@ type PostBodyRequest struct {
 }
 
 func main() {
+
+	// Load environment variables
+	err := godotenv.Load()
+
+	// Check if there was an error loading the .env file
+	if err != nil {
+		panic("Error loading .env file")
+	}
 
 	// Prisma setup
 	client := db.NewClient()

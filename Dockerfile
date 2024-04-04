@@ -17,8 +17,8 @@ RUN go run github.com/steebchen/prisma-client-go generate
 # build the binary with all dependencies
 RUN go build -o /app .
 
-# Expose port 8080 to the outside world
-EXPOSE 8080
+# Expose port to the outside world
+EXPOSE 5001
 
 CMD ["/app"]
  
