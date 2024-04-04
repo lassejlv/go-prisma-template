@@ -7,11 +7,6 @@ import (
 	"github.com/joho/godotenv"
 )
 
-type PostBodyRequest struct {
-	Title     string `json:"title"`
-	Published bool   `json:"published"`
-}
-
 func main() {
 
 	// Load environment variables
